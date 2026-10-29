@@ -1,4 +1,5 @@
 import { Code2, GitBranch, Users, Lightbulb } from "lucide-react";
+import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
 const focusAreas = [
   {
@@ -29,34 +30,39 @@ const focusAreas = [
 
 export function FocusAreas() {
   return (
-    <section className="py-20 md:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 md:py-32 bg-gradient-to-b from-white to-cyan/5 relative overflow-hidden">
+      {/* Background blob */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-cyan/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          {focusAreas.map((area) => (
-            <div
-              key={area.number}
-              className="group bg-white border-2 border-gray-200 p-8 hover:border-cyan transition-all duration-300"
-            >
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <span className="text-4xl font-bold text-cyan/20 group-hover:text-cyan/40 transition-colors">
-                    {area.number}
-                  </span>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-4 mb-4">
-                    <area.icon
-                      size={32}
-                      className="text-cyan-text group-hover:scale-110 transition-transform"
-                    />
-                    <h3 className="text-2xl font-bold text-navy">{area.title}</h3>
+          {focusAreas.map((area, index) => (
+            <ScrollReveal key={area.number} delay={index * 0.1}>
+              <div
+                className="group glass-light p-8 card-hover"
+                style={{ borderRadius: 'var(--radius-lg)' }}
+              >
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <span className="text-4xl font-bold text-cyan/20 group-hover:text-cyan/40 transition-colors">
+                      {area.number}
+                    </span>
                   </div>
-                  <p className="text-secondary-text leading-relaxed">
-                    {area.description}
-                  </p>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-4 mb-4">
+                      <area.icon
+                        size={32}
+                        className="text-cyan-text group-hover:scale-110 transition-transform"
+                      />
+                      <h3 className="text-2xl font-bold text-navy">{area.title}</h3>
+                    </div>
+                    <p className="text-secondary-text leading-relaxed">
+                      {area.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

@@ -19,15 +19,17 @@ export function CTAButton({
   showArrow = false,
   onClick,
 }: CTAButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-medium transition-all duration-200 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2";
+  const baseClasses = "inline-flex items-center justify-center gap-2 px-8 py-4 font-medium transition-all duration-200 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2";
   
   const variantClasses = {
-    primary: "bg-cyan text-white hover:bg-cyan/90 disabled:bg-secondary-text disabled:cursor-not-allowed",
-    secondary: "bg-navy text-white hover:bg-navy/90 disabled:bg-secondary-text disabled:cursor-not-allowed",
+    primary: "bg-cyan text-white hover:bg-cyan/90 disabled:bg-secondary-text disabled:cursor-not-allowed shadow-lg hover:shadow-xl",
+    secondary: "bg-navy text-white hover:bg-navy/90 disabled:bg-secondary-text disabled:cursor-not-allowed shadow-lg hover:shadow-xl",
     outline: "border-2 border-navy text-navy hover:bg-navy hover:text-white disabled:border-secondary-text disabled:text-secondary-text disabled:cursor-not-allowed",
   };
+  
+  const radiusClass = "rounded-[var(--radius-md)]";
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
+  const classes = `${baseClasses} ${variantClasses[variant]} ${radiusClass} ${className}`;
 
   const content = (
     <>

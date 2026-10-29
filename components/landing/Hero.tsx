@@ -7,6 +7,22 @@ import Image from "next/image";
 export function Hero() {
   return (
     <section className="relative bg-white min-h-screen flex items-center overflow-hidden">
+      {/* Animated Gradient Blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div 
+          className="absolute top-20 left-10 w-96 h-96 bg-cyan/20 rounded-full blur-3xl animate-float"
+          style={{ willChange: 'transform, opacity' }}
+        />
+        <div 
+          className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-navy/15 rounded-full blur-3xl animate-float-delayed"
+          style={{ willChange: 'transform, opacity' }}
+        />
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan/10 rounded-full blur-3xl animate-float"
+          style={{ willChange: 'transform, opacity', animationDelay: '5s' }}
+        />
+      </div>
+
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -106,7 +122,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 animate-fade-in">
         <div className="max-w-4xl">
           {/* Logo */}
           <div className="mb-8">
@@ -117,6 +133,7 @@ export function Hero() {
               height={100}
               priority
               className="h-16 w-auto sm:h-20 md:h-24 mb-8"
+              style={{ borderRadius: 'var(--radius-md)' }}
             />
           </div>
 
@@ -145,14 +162,14 @@ export function Hero() {
             <CTAButton
               variant="primary"
               href={siteConfig.membershipUrl}
-              className="text-lg"
+              className="text-lg button-hover"
             >
               Join the Community
             </CTAButton>
             <CTAButton
               variant="outline"
               href="#about"
-              className="text-lg"
+              className="text-lg button-hover"
               showArrow
             >
               Learn More

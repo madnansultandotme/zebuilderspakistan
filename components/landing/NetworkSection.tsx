@@ -1,22 +1,30 @@
 "use client";
 
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
 export function NetworkSection() {
   return (
-    <section className="py-20 md:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="OUR NETWORK"
-          heading="Building across universities."
-          className="mb-4"
-        />
-        <p className="text-xl text-secondary-text text-center mb-16 max-w-2xl mx-auto">
-          Local chapters. Shared knowledge. National impact.
-        </p>
+    <section className="py-20 md:py-32 bg-gradient-to-b from-white via-cyan/3 to-white overflow-hidden relative">
+      {/* Background blobs */}
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-navy/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-cyan/8 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <ScrollReveal>
+          <SectionHeading
+            eyebrow="OUR NETWORK"
+            heading="Building across universities."
+            className="mb-4"
+          />
+          <p className="text-xl text-secondary-text text-center mb-16 max-w-2xl mx-auto">
+            Local chapters. Shared knowledge. National impact.
+          </p>
+        </ScrollReveal>
 
         {/* Network Visualization */}
-        <div className="relative h-64 md:h-96 max-w-4xl mx-auto">
+        <ScrollReveal delay={0.2}>
+          <div className="relative h-64 md:h-96 max-w-4xl mx-auto">
           {/* Central Hub */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
             <div className="relative">
@@ -73,6 +81,7 @@ export function NetworkSection() {
             );
           })}
         </div>
+      </ScrollReveal>
       </div>
     </section>
   );
