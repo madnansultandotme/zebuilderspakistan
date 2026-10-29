@@ -5,7 +5,6 @@ import { CommunityIntro } from "@/components/landing/CommunityIntro";
 import { FocusAreas } from "@/components/landing/FocusAreas";
 import { NetworkSection } from "@/components/landing/NetworkSection";
 import { PurposeVision } from "@/components/landing/PurposeVision";
-import { EventsPreview } from "@/components/landing/EventsPreview";
 import { FinalCTA } from "@/components/landing/FinalCTA";
 import { FloatingSocials } from "@/components/shared/FloatingSocials";
 
@@ -14,13 +13,12 @@ export default function Home() {
     <>
       <Navbar />
       <FloatingSocials />
-      <main>
+      <main id="main-content">
         <Hero />
         <CommunityIntro />
         <FocusAreas />
         <NetworkSection />
         <PurposeVision />
-        <EventsPreview />
         <FinalCTA />
       </main>
       <Footer />

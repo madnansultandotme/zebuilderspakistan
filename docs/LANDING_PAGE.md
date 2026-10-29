@@ -40,13 +40,13 @@ zebuilderspakistan/
 │   │   ├── FocusAreas.tsx        # 4 core focus areas
 │   │   ├── NetworkSection.tsx    # National network visualization
 │   │   ├── PurposeVision.tsx     # Purpose & Vision section
-│   │   ├── EventsPreview.tsx     # Events & activities preview
 │   │   └── FinalCTA.tsx          # Final call-to-action
 │   │
 │   └── shared/
 │       ├── CTAButton.tsx         # Reusable button component
 │       ├── SectionHeading.tsx    # Reusable section heading
-│       └── SocialLinks.tsx       # Social media links
+│       ├── SocialLinks.tsx       # Social media links
+│       └── FloatingSocials.tsx   # Floating social icons
 │
 ├── config/
 │   ├── site.ts             # Site configuration
@@ -149,7 +149,7 @@ export const socialLinks = {
 
 **Features:**
 - Official Zeppelin Student Builders logo (light background version)
-- Desktop navigation: About, Events
+- Desktop navigation: About
 - Primary CTA: "Join the Community"
 - Mobile hamburger menu
 - Smooth transitions and hover effects
@@ -327,26 +327,7 @@ export const socialLinks = {
 
 ---
 
-#### 6. EventsPreview (`components/landing/EventsPreview.tsx`)
-
-**Purpose:** Showcase types of community activities
-
-**Event Types:**
-- Hackathons (Zap icon)
-- Workshops (Presentation icon)
-- Open Source Sprints (GitPullRequest icon)
-- Developer Meetups (Coffee icon)
-- Learning Sessions (Code icon)
-- Placeholder card ("And more...")
-
-**Layout:**
-- 3-column grid (responsive)
-- Icon + title + description
-- Hover effects (border, shadow, icon scale)
-
----
-
-#### 7. FinalCTA (`components/landing/FinalCTA.tsx`)
+#### 6. FinalCTA (`components/landing/FinalCTA.tsx`)
 
 **Purpose:** Strong conversion section
 

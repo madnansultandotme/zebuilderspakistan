@@ -9,8 +9,8 @@ interface SocialLinksProps {
 export function SocialLinks({ variant = "default", className = "" }: SocialLinksProps) {
   const iconSize = variant === "footer" ? 20 : 24;
   const iconClasses = variant === "footer" 
-    ? "text-secondary-text hover:text-cyan transition-colors duration-200"
-    : "text-navy hover:text-cyan transition-colors duration-200";
+    ? "text-secondary-text hover:text-cyan-text transition-colors duration-200 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2 rounded"
+    : "text-navy hover:text-cyan-text transition-colors duration-200 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2 rounded";
 
   return (
     <div className={`flex items-center gap-4 ${className}`}>
@@ -18,7 +18,7 @@ export function SocialLinks({ variant = "default", className = "" }: SocialLinks
         href={socialLinks.instagram}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Instagram"
+        aria-label="Follow us on Instagram"
         className={iconClasses}
       >
         <FaInstagram size={iconSize} />
@@ -27,7 +27,7 @@ export function SocialLinks({ variant = "default", className = "" }: SocialLinks
         href={socialLinks.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="LinkedIn"
+        aria-label="Follow us on LinkedIn"
         className={iconClasses}
       >
         <FaLinkedin size={iconSize} />
@@ -36,7 +36,7 @@ export function SocialLinks({ variant = "default", className = "" }: SocialLinks
         href={socialLinks.github}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="GitHub"
+        aria-label="View our GitHub organization"
         className={iconClasses}
       >
         <FaGithub size={iconSize} />
@@ -45,7 +45,7 @@ export function SocialLinks({ variant = "default", className = "" }: SocialLinks
         href={socialLinks.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="WhatsApp Community"
+        aria-label="Join our WhatsApp community"
         className={iconClasses}
       >
         <FaWhatsapp size={iconSize} />

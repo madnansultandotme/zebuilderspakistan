@@ -10,8 +10,8 @@ export function FloatingSocials() {
         href={socialLinks.instagram}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Instagram"
-        className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-navy hover:text-white hover:bg-[#E4405F] transition-all duration-300 hover:scale-110"
+        aria-label="Follow us on Instagram"
+        className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-navy hover:text-white hover:bg-[#E4405F] transition-all duration-300 hover:scale-110 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2"
       >
         <FaInstagram size={20} />
       </a>
@@ -19,8 +19,8 @@ export function FloatingSocials() {
         href={socialLinks.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="LinkedIn"
-        className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-navy hover:text-white hover:bg-[#0077B5] transition-all duration-300 hover:scale-110"
+        aria-label="Follow us on LinkedIn"
+        className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-navy hover:text-white hover:bg-[#0077B5] transition-all duration-300 hover:scale-110 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2"
       >
         <FaLinkedin size={20} />
       </a>
@@ -28,8 +28,8 @@ export function FloatingSocials() {
         href={socialLinks.github}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="GitHub"
-        className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-navy hover:text-white hover:bg-[#333333] transition-all duration-300 hover:scale-110"
+        aria-label="View our GitHub organization"
+        className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-navy hover:text-white hover:bg-[#333333] transition-all duration-300 hover:scale-110 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2"
       >
         <FaGithub size={20} />
       </a>
@@ -37,8 +37,8 @@ export function FloatingSocials() {
         href={socialLinks.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="WhatsApp Community"
-        className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-navy hover:text-white hover:bg-[#25D366] transition-all duration-300 hover:scale-110"
+        aria-label="Join our WhatsApp community"
+        className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-navy hover:text-white hover:bg-[#25D366] transition-all duration-300 hover:scale-110 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2"
       >
         <FaWhatsapp size={20} />
       </a>

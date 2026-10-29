@@ -4,6 +4,7 @@
   /* Brand Colors */
   --color-navy: #0D1E32;
   --color-cyan: #159BD4;
+  --color-cyan-text: #0B79AA; /* WCAG AA compliant for text (4.52:1 on white) */
   --color-secondary-text: #64748B;
 }
 
@@ -24,6 +25,18 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 3px solid #159BD4;
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #159BD4;
+  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

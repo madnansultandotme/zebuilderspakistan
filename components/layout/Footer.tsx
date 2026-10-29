@@ -21,7 +21,7 @@ export function Footer() {
                 className="h-10 w-auto"
               />
             </div>
-            <p className="text-cyan text-sm font-medium mb-3 tracking-wide">
+            <p className="text-cyan-text text-sm font-medium mb-3 tracking-wide">
               Learning · Mentorship · Open Source
             </p>
             <p className="text-gray-300 max-w-md leading-relaxed">
@@ -42,7 +42,7 @@ export function Footer() {
             © {currentYear} {siteConfig.name}
           </p>
           <p className="text-gray-400 text-sm">
-            A <span className="text-cyan font-medium">{siteConfig.organization}</span> initiative
+            A <span className="text-cyan-text font-medium">{siteConfig.organization}</span> initiative
           </p>
         </div>
       </div>

@@ -19,8 +19,9 @@ export function Navbar() {
   }, []);
 
   const navigationItems = [
-    { label: "About", href: "#about" },
-    { label: "Events", href: "#events" },
+    { label: "About", href: "/about" },
+    { label: "Community", href: "/community" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -32,7 +33,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="/" className="flex items-center gap-3 group">
             <Image
               src="/logos/light-bg-logo.png"
               alt={siteConfig.name}
@@ -49,7 +50,7 @@ export function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-navy hover:text-cyan transition-colors font-medium"
+                className="text-navy hover:text-cyan-text transition-colors font-medium focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2 rounded px-2 py-1"
               >
                 {item.label}
               </a>
@@ -86,7 +87,7 @@ export function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="block text-navy hover:text-cyan transition-colors font-medium py-2"
+                className="block text-navy hover:text-cyan-text transition-colors font-medium py-2 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2 rounded px-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}

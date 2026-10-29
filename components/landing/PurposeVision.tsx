@@ -17,7 +17,7 @@ export function PurposeVision() {
           <div className="bg-white border-l-4 border-cyan p-8 md:p-12 shadow-md">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 bg-cyan/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Target size={32} className="text-cyan" />
+                <Target size={32} className="text-cyan-text" />
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-navy">Our Purpose</h3>
             </div>
@@ -52,19 +52,19 @@ export function PurposeVision() {
         </div>
 
         {/* Core Values */}
-        <div className="mt-16 bg-navy p-8 md:p-12 text-center">
-          <h4 className="text-cyan font-semibold mb-6 uppercase tracking-wide text-sm">
+        <div className="mt-16 bg-cyan/5 border-2 border-cyan/20 p-8 md:p-12 text-center">
+          <h4 className="text-cyan-text font-semibold mb-6 uppercase tracking-wide text-sm">
             What We Believe In
           </h4>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-white/80">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-navy/70">
             <span className="text-base hover:text-cyan transition-colors cursor-default">Learning by Doing</span>
-            <span className="text-white/20">·</span>
+            <span className="text-navy/20">·</span>
             <span className="text-base hover:text-cyan transition-colors cursor-default">Collaboration Over Competition</span>
-            <span className="text-white/20">·</span>
+            <span className="text-navy/20">·</span>
             <span className="text-base hover:text-cyan transition-colors cursor-default">Open Source First</span>
-            <span className="text-white/20">·</span>
+            <span className="text-navy/20">·</span>
             <span className="text-base hover:text-cyan transition-colors cursor-default">Community Support</span>
-            <span className="text-white/20">·</span>
+            <span className="text-navy/20">·</span>
             <span className="text-base hover:text-cyan transition-colors cursor-default">Continuous Growth</span>
           </div>
         </div>

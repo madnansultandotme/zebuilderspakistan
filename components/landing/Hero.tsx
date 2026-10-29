@@ -6,14 +6,14 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative bg-navy min-h-screen flex items-center overflow-hidden">
+    <section className="relative bg-white min-h-screen flex items-center overflow-hidden">
       {/* Background Grid */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(21, 155, 212, 0.5) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(21, 155, 212, 0.5) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(21, 155, 212, 0.3) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(21, 155, 212, 0.3) 1px, transparent 1px)`,
             backgroundSize: "50px 50px",
           }}
         />
@@ -26,7 +26,7 @@ export function Hero() {
           <defs>
             <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" style={{ stopColor: "#159BD4", stopOpacity: 0 }} />
-              <stop offset="50%" style={{ stopColor: "#159BD4", stopOpacity: 0.3 }} />
+              <stop offset="50%" style={{ stopColor: "#159BD4", stopOpacity: 0.2 }} />
               <stop offset="100%" style={{ stopColor: "#159BD4", stopOpacity: 0 }} />
             </linearGradient>
           </defs>
@@ -64,7 +64,7 @@ export function Hero() {
 
         {/* Floating Nodes */}
         <div
-          className="absolute w-2 h-2 bg-cyan rounded-full"
+          className="absolute w-2 h-2 bg-cyan rounded-full opacity-60"
           style={{
             top: "20%",
             left: "10%",
@@ -72,7 +72,7 @@ export function Hero() {
           }}
         />
         <div
-          className="absolute w-3 h-3 bg-cyan/60 rounded-full"
+          className="absolute w-3 h-3 bg-cyan/40 rounded-full"
           style={{
             top: "35%",
             left: "40%",
@@ -80,7 +80,7 @@ export function Hero() {
           }}
         />
         <div
-          className="absolute w-2 h-2 bg-cyan rounded-full"
+          className="absolute w-2 h-2 bg-cyan rounded-full opacity-60"
           style={{
             top: "25%",
             right: "15%",
@@ -88,7 +88,7 @@ export function Hero() {
           }}
         />
         <div
-          className="absolute w-3 h-3 bg-cyan/60 rounded-full"
+          className="absolute w-3 h-3 bg-cyan/40 rounded-full"
           style={{
             bottom: "30%",
             left: "40%",
@@ -96,7 +96,7 @@ export function Hero() {
           }}
         />
         <div
-          className="absolute w-2 h-2 bg-cyan rounded-full"
+          className="absolute w-2 h-2 bg-cyan rounded-full opacity-60"
           style={{
             bottom: "40%",
             right: "30%",
@@ -111,7 +111,7 @@ export function Hero() {
           {/* Logo */}
           <div className="mb-8">
             <Image
-              src="/logos/dark-bg-logo.png"
+              src="/logos/light-bg-logo.png"
               alt={siteConfig.name}
               width={400}
               height={100}
@@ -121,22 +121,22 @@ export function Hero() {
           </div>
 
           {/* Positioning Statement */}
-          <p className="text-cyan text-xl md:text-2xl font-semibold mb-4 tracking-wide uppercase">
+          <p className="text-cyan-text text-xl md:text-2xl font-semibold mb-4 tracking-wide uppercase">
             {siteConfig.positioning}
           </p>
 
           {/* Tagline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-4">
             {siteConfig.tagline}
-          </h2>
+          </h1>
 
           {/* Supporting Statement */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-medium">
+          <p className="text-xl md:text-2xl text-navy/80 mb-8 font-medium">
             {siteConfig.supportingStatement}
           </p>
 
           {/* Description */}
-          <p className="text-lg text-gray-300 mb-12 max-w-3xl leading-relaxed">
+          <p className="text-lg text-secondary-text mb-12 max-w-3xl leading-relaxed">
             {siteConfig.description}
           </p>
 
@@ -144,8 +144,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <CTAButton
               variant="primary"
-              href={siteConfig.membershipUrl || undefined}
-              disabled={!siteConfig.membershipUrl}
+              href={siteConfig.membershipUrl}
               className="text-lg"
             >
               Join the Community
@@ -153,7 +152,7 @@ export function Hero() {
             <CTAButton
               variant="outline"
               href="#about"
-              className="text-lg border-white text-white hover:bg-white hover:text-navy"
+              className="text-lg"
               showArrow
             >
               Learn More

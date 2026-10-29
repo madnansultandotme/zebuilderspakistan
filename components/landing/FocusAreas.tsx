@@ -47,7 +47,7 @@ export function FocusAreas() {
                   <div className="flex items-center gap-4 mb-4">
                     <area.icon
                       size={32}
-                      className="text-cyan group-hover:scale-110 transition-transform"
+                      className="text-cyan-text group-hover:scale-110 transition-transform"
                     />
                     <h3 className="text-2xl font-bold text-navy">{area.title}</h3>
                   </div>
