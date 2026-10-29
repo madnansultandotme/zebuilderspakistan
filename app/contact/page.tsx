@@ -134,37 +134,65 @@ export default function ContactPage() {
                     href={socialLinks.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="glass-light w-16 h-16 flex items-center justify-center card-hover hover:bg-[#E4405F] hover:text-white transition-all text-navy focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2"
-                    style={{ borderRadius: 'var(--radius-pill)' }}
+                    className="w-16 h-16 flex items-center justify-center text-navy transition-all duration-300 hover:scale-110 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2 relative overflow-hidden group"
+                    style={{ 
+                      borderRadius: 'var(--radius-pill)',
+                      background: 'rgba(255, 255, 255, 0.65)',
+                      backdropFilter: 'blur(16px)',
+                      border: '1px solid rgba(255, 255, 255, 0.4)',
+                      boxShadow: '0 8px 32px 0 rgba(13, 30, 50, 0.08)'
+                    }}
                   >
-                    <FaInstagram size={28} />
+                    <div className="absolute inset-0 bg-[#E4405F] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ borderRadius: 'var(--radius-pill)' }} />
+                    <FaInstagram size={28} className="relative z-10 group-hover:text-white transition-colors duration-300" />
                   </a>
                   <a
                     href={socialLinks.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="glass-light w-16 h-16 flex items-center justify-center card-hover hover:bg-[#0077B5] hover:text-white transition-all text-navy focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2"
-                    style={{ borderRadius: 'var(--radius-pill)' }}
+                    className="w-16 h-16 flex items-center justify-center text-navy transition-all duration-300 hover:scale-110 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2 relative overflow-hidden group"
+                    style={{ 
+                      borderRadius: 'var(--radius-pill)',
+                      background: 'rgba(255, 255, 255, 0.65)',
+                      backdropFilter: 'blur(16px)',
+                      border: '1px solid rgba(255, 255, 255, 0.4)',
+                      boxShadow: '0 8px 32px 0 rgba(13, 30, 50, 0.08)'
+                    }}
                   >
-                    <FaLinkedin size={28} />
+                    <div className="absolute inset-0 bg-[#0077B5] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ borderRadius: 'var(--radius-pill)' }} />
+                    <FaLinkedin size={28} className="relative z-10 group-hover:text-white transition-colors duration-300" />
                   </a>
                   <a
                     href={socialLinks.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="glass-light w-16 h-16 flex items-center justify-center card-hover hover:bg-[#333333] hover:text-white transition-all text-navy focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2"
-                    style={{ borderRadius: 'var(--radius-pill)' }}
+                    className="w-16 h-16 flex items-center justify-center text-navy transition-all duration-300 hover:scale-110 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2 relative overflow-hidden group"
+                    style={{ 
+                      borderRadius: 'var(--radius-pill)',
+                      background: 'rgba(255, 255, 255, 0.65)',
+                      backdropFilter: 'blur(16px)',
+                      border: '1px solid rgba(255, 255, 255, 0.4)',
+                      boxShadow: '0 8px 32px 0 rgba(13, 30, 50, 0.08)'
+                    }}
                   >
-                    <FaGithub size={28} />
+                    <div className="absolute inset-0 bg-[#333333] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ borderRadius: 'var(--radius-pill)' }} />
+                    <FaGithub size={28} className="relative z-10 group-hover:text-white transition-colors duration-300" />
                   </a>
                   <a
                     href={socialLinks.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="glass-light w-16 h-16 flex items-center justify-center card-hover hover:bg-[#25D366] hover:text-white transition-all text-navy focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2"
-                    style={{ borderRadius: 'var(--radius-pill)' }}
+                    className="w-16 h-16 flex items-center justify-center text-navy transition-all duration-300 hover:scale-110 focus-visible:outline focus-visible:outline-3 focus-visible:outline-cyan focus-visible:outline-offset-2 relative overflow-hidden group"
+                    style={{ 
+                      borderRadius: 'var(--radius-pill)',
+                      background: 'rgba(255, 255, 255, 0.65)',
+                      backdropFilter: 'blur(16px)',
+                      border: '1px solid rgba(255, 255, 255, 0.4)',
+                      boxShadow: '0 8px 32px 0 rgba(13, 30, 50, 0.08)'
+                    }}
                   >
-                    <FaWhatsapp size={28} />
+                    <div className="absolute inset-0 bg-[#25D366] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ borderRadius: 'var(--radius-pill)' }} />
+                    <FaWhatsapp size={28} className="relative z-10 group-hover:text-white transition-colors duration-300" />
                   </a>
                 </div>
               </div>
